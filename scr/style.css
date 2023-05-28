@@ -1,0 +1,106 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.dropdown-check-list {
+    display: inline-block;
+  }
+  
+  
+  .anchor{
+    display: none; 
+    position: relative;
+    cursor: pointer;
+    
+    //display inline block
+    
+  }
+  .field{
+    border: 1px solid #ccc;
+    width: 300px;
+    border-radius: 5px;
+    position: relative;
+    padding-right: 20px;
+    
+  }
+  .field:hover{
+    border-color: #31a2ff;
+  }
+
+  .dropdown-check-list .items {
+    padding: 2px;
+    display: none;
+    margin: 0;
+    border: 1px solid #31a2ff;
+    border-top: none;
+    
+  }
+  
+  .dropdown-check-list ul.items li {
+    list-style: none;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 1px;
+  }
+  .dropdown-check-list ul.items li:hover {
+    background-color: #ebebeb;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+  }
+  
+  .dropdown-check-list.visible .field{
+    border-color: #31a2ff;
+  }
+  
+  .dropdown-check-list.visible .items {
+    display: block;
+    max-height: 300px;
+    overflow: auto;
+  }
+.sell{
+    background-color: #ebebeb;
+    font-size: 13px;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 1px;
+    margin: 1px;
+}
+.sell button{
+    border: none;
+    color: rgb(156, 156, 156);
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    
+}
+.sell button:hover{
+    color: rgb(32, 32, 32);
+}
+.clear{
+    border: none;
+    cursor: pointer;
+    color: rgb(156, 156, 156);
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+}
+.clear:hover{
+    color: black;
+}
+
+.input{
+    border: none; 
+    width: 90%;
+}
+.input:focus{
+    outline: none;
+}
+
+.chosen{
+    transition: ease-in-out 0.2s;
+    background-color: #b4ddff;
+    font-weight: bold;
+}
