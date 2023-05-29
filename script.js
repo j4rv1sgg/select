@@ -67,7 +67,14 @@ request()
 
 
 function toggleVisibility(isVisible) {
-    isVisible ? checkList.classList.add('visible') : checkList.classList.remove('visible')
+    if (isVisible){
+        checkList.classList.add('visible')
+        field.classList.add('field-border')
+    } else {
+        checkList.classList.remove('visible')
+        field.classList.remove('field-border')
+    }
+    
 }
 
 input.onclick = () => toggleVisibility(true)
@@ -134,7 +141,6 @@ function handleClick(event) {
         event.target === items || items.contains(event.target) ||
         event.target.classList.contains('removeButton')
       ) {
-        console.log(event.target)
         return;
       }
 
@@ -156,6 +162,23 @@ input.addEventListener('input', function() {
     }
   });
 });
+
+
+document.addEventListener('keydown', function(event){
+    if (document.activeElement === input){
+        let keyCode = event.keyCode || event.which;
+        switch (keyCode){
+            case 13:
+                toggleVisibility(true)
+                break;
+            case 27:
+                input.value = '';
+                toggleVisibility(false)
+                break; 
+            
+            }
+    }
+})
 
 
 

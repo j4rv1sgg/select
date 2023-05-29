@@ -3,10 +3,9 @@ body{
     
 }
 
-.dropdown-check-list {
+  .dropdown-check-list {
     display: inline-block;
   }
-  
   
   .anchor{
     display: none; 
@@ -20,7 +19,9 @@ body{
     border-radius: 5px;
     position: relative;
     padding-right: 20px;
-    
+  }
+  .field-border{
+    border-radius: 5px 5px 0 0;
   }
   .field:hover{
     border-color: #31a2ff;
@@ -91,6 +92,7 @@ body{
 
 .input{
     border: none; 
+    border-radius: 5px;
     width: 90%;
 }
 .input:focus{
