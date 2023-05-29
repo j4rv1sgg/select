@@ -84,7 +84,7 @@ function add(id){
     let li = document.getElementById(id)
     
     item.textContent = li.textContent;
-    item.className = 'sell'
+    item.className = 'selectedItem'
 
     if(!li.classList.contains("chosen")){
         selectedOptions.push(item.textContent)
@@ -98,6 +98,7 @@ function add(id){
         removeSelected(li)
     }
     removeButton.textContent = "✖"
+    removeButton.classList.add('removeButton')
     item.appendChild(removeButton)
   
     if(Array.from(anchor.children).find(arrItem => {return arrItem.textContent === item.textContent})){
@@ -130,8 +131,10 @@ clearButton.onclick = ()=>{
 function handleClick(event) {
     if (
         event.target === field || field.contains(event.target) ||
-        event.target === items || items.contains(event.target)
+        event.target === items || items.contains(event.target) ||
+        event.target.classList.contains('removeButton')
       ) {
+        console.log(event.target)
         return;
       }
 

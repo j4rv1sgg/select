@@ -13,8 +13,6 @@ body{
     position: relative;
     cursor: pointer;
     
-    //display inline block
-    
   }
   .field{
     border: 1px solid #ccc;
@@ -58,7 +56,7 @@ body{
     max-height: 300px;
     overflow: auto;
   }
-.sell{
+.selectedItem{
     background-color: #ebebeb;
     font-size: 13px;
     border-radius: 5px;
@@ -66,7 +64,7 @@ body{
     padding: 1px;
     margin: 1px;
 }
-.sell button{
+.selectedItem button{
     border: none;
     color: rgb(156, 156, 156);
     background-color: transparent;
@@ -74,7 +72,7 @@ body{
     font-size: 13px;
     
 }
-.sell button:hover{
+.selectedItem button:hover{
     color: rgb(32, 32, 32);
 }
 .clear{
