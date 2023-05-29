@@ -33,7 +33,16 @@ body{
     margin: 0;
     border: 1px solid #31a2ff;
     border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+  }
+  .items::-webkit-scrollbar {
+    width: 6px;
     
+  }
+  .items::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+    border-radius: 5px;
   }
   
   .dropdown-check-list ul.items li {
@@ -101,6 +110,6 @@ body{
 
 .chosen{
     transition: ease-in-out 0.2s;
-    background-color: #b4ddff;
+    background-color: #cfe9ff;
     font-weight: bold;
 }
