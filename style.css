@@ -18,7 +18,9 @@ body{
     width: 300px;
     border-radius: 5px;
     position: relative;
-    padding-right: 20px;
+    padding: 2px 20px 2px 2px;
+    display: flex;
+    flex-wrap: wrap
   }
   .field-border{
     border-radius: 5px 5px 0 0;
@@ -71,7 +73,7 @@ body{
     font-size: 13px;
     border-radius: 5px;
     display: inline-block;
-    padding: 1px;
+    padding: 1px 1px 1px 5px;
     margin: 1px;
 }
 .selectedItem button{
@@ -92,7 +94,7 @@ body{
     background-color: transparent;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 1px;
     
 }
 .clear:hover{
@@ -102,7 +104,8 @@ body{
 .input{
     border: none; 
     border-radius: 5px;
-    width: 90%;
+    min-width: 80px;
+    flex-grow: 1;
 }
 .input:focus{
     outline: none;

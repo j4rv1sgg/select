@@ -51,7 +51,7 @@ async function request(){
     
         let opt = document.createElement('li')
         opt.id = index
-        opt.tabIndex = index // ne robe
+        opt.tabIndex = index+2 // ne robe
         opt.textContent = item
         items.appendChild(opt)
     })
