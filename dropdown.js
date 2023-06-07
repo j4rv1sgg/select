@@ -24,14 +24,14 @@ export default function DropdownCheckList(options) {
       clearButton.textContent = '✖';
       
 
-      
+      ///temprorary
       let show = document.createElement('button')
       show.textContent = 'Show'
       show.onclick = ()=>{
         console.log(this.selectedOptions)
       }
       field.appendChild(show)
-
+      ///
 
   
       field.appendChild(anchor);
@@ -56,7 +56,6 @@ export default function DropdownCheckList(options) {
   
     // by array
     this.request = function() { 
-        
         this.options.forEach((item, index) => {
           let opt = document.createElement('li');
           opt.id = index;
@@ -80,13 +79,10 @@ export default function DropdownCheckList(options) {
   
       const optionsList = this.items.querySelectorAll('li');
       optionsList.forEach((item, index) => {
-        item.addEventListener('click', () => {
-          this.add(index);
-        });
+        item.addEventListener('click', () => this.add(index));
       });
     };
-  
-    
+   
     this.toggleVisibility = function(isVisible) {
       if (isVisible) {
         this.checkList.classList.add('visible');
@@ -97,7 +93,6 @@ export default function DropdownCheckList(options) {
       }
     };
   
-    
     this.add = function(id) {
       let item = document.createElement('div');
       let li = this.items.children[id];
@@ -105,7 +100,6 @@ export default function DropdownCheckList(options) {
       item.textContent = li.textContent;
       item.className = 'selectedItem';
 
-  
       if (!this.selectedOptions.includes(item.textContent)) {
         li.classList.add(`chosen`);
         this.selectedOptions.push(item.textContent);
@@ -163,7 +157,6 @@ export default function DropdownCheckList(options) {
       ) {
         return;
       }
-  
       this.toggleVisibility(false);
     };
   
@@ -171,13 +164,11 @@ export default function DropdownCheckList(options) {
     this.init = function() {
       this.createStructure();
       this.request();
-  
       this.input.onclick = () => this.toggleVisibility(true);
-  
-      this.clearButton.onclick = () => {
-        this.clearSelected();
-      };
-  
+      
+      this.clearButton.onclick = () => this.clearSelected()
+      
+
       document.addEventListener('click', this.handleClick.bind(this));
   
       this.input.addEventListener('input', () => {
